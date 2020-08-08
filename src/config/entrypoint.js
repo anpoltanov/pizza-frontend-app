@@ -1,0 +1,1 @@
+export const ENTRYPOINT = (process.env.NODE_ENV === 'production') ? process.env.REACT_APP_API_ENTRYPOINT : "http://127.0.0.1:8000/";
