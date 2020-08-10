@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Menu from "./components/Menu";
+import Menu from "./components/layout/Menu";
 
 class App extends React.Component{
   render() {
@@ -9,10 +9,10 @@ class App extends React.Component{
           <Menu/>
           <div className="container">
             <div className="row pt-3">
-              <div className="col-xxl-10">
+              <div className="col-xl-10">
                 {this.props.render(this.state)}
               </div>
-              <div className="col-xxl-2">
+              <div className="col-xl-2">
               </div>
             </div>
           </div>

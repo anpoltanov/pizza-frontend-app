@@ -17,8 +17,8 @@ export function fetch(id, options = {}) {
     ) {
         options.headers.set('Content-Type', MIME_TYPE);
     }
-    if (localStorage.api_token) {
-        options.headers.set('X-Auth-Token', localStorage.api_token);
+    if (localStorage.auth_token) {
+        options.headers.set('X-Auth-Token', localStorage.auth_token);
     }
 
     return global.fetch(new URL(id, ENTRYPOINT), options).then(response => {
@@ -53,7 +53,7 @@ export function fetch(id, options = {}) {
 }
 
 export function normalize(data) {
-    if (Array.isArray(data)) {
+    if (Array.isArray(data) && data.length > 0) {
         data = data.map(item => normalize(item));
         return {"data": data};
     }

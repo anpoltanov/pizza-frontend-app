@@ -8,12 +8,36 @@ i18next
                 translation: {
                     layout: {
                         title: 'Pizza',
+                        menuProducts: 'Menu',
+                        menuProductsPizza: 'Pizza',
+                        menuProductsSnacks: 'Snacks',
+                        menuProductsDrinks: 'Drinks',
+                        menuProfile: 'Profile',
+                        menuProfileLogout: 'Logout',
+                        menuProfileLogin: 'Sign in',
+                        menuProfileOrders: 'Orders history',
+                        menuOrderCart: 'Cart',
+                        currencyEUR: '€ EUR',
+                        currencyUSD: '$ USD',
                     },
                     common: {
                         login: 'Sign in',
+                        loginUsername: 'E-mail',
+                        loginPassword: 'Password',
+                        loginSubmit: 'Sign In',
+                        submit: 'Submit',
                     },
                     product: {
-                        order: 'Order',
+                        order: 'Add to cart',
+                    },
+                    order: {
+                        cart: 'Cart',
+                        placeOrder: 'Place order',
+                        cartIsEmpty: 'Cart is empty',
+                        deliveryAddress: 'Delivery address',
+                        comment: 'Comment',
+                        reset: 'Reset',
+                        placed: 'Your order was successfully sent to us and we are already preparing it!'
                     }
                 }
             },

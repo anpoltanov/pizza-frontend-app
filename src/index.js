@@ -12,14 +12,18 @@ import {
 } from 'connected-react-router';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
-// import 'font-awesome/css/font-awesome.css';
+import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import App from './App';
 import './translations';
 import * as serviceWorker from './serviceWorker';
 // reducers and routes
-import login from './reducers/login'
+import user from './reducers/user/'
 import product from './reducers/product/'
+import order from './reducers/order/'
+import layout from './reducers/layout/'
+import orderRoutes from './routes/order'
+import userRoutes from './routes/user'
 import * as ProductList from "./components/product/List";
 require('jquery');
 
@@ -28,7 +32,9 @@ const store = createStore(
     combineReducers({
         router: connectRouter(history),
         product,
-        login
+        order,
+        user,
+        layout,
     }),
     applyMiddleware(routerMiddleware(history), thunk)
 );
@@ -39,6 +45,8 @@ ReactDOM.render(
             <App render={app => (
                 <Switch>
                     <Route path="/" component={ProductList.default} strict={true} exact={true}/>
+                    {orderRoutes}
+                    {userRoutes}
                     <Route render={() => <h1>Not Found</h1>} />
                 </Switch>
             )}/>
