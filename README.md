@@ -1,4 +1,4 @@
-#pizza-frontend-app
+# pizza-frontend-app
 
 This is a test task for Innoscripta GmbH. 
 The goal was to make simple and scalable application with functions of menu page, product cart, calculating total and placing orders, orders history for authenticated users, currency switching.
